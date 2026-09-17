@@ -1,0 +1,213 @@
+/* Лабораторная № 2. Все части рисунка находятся внутри квадрата 200 × 200. */
+.picture {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  background: white;
+}
+
+/* Четверть солнца в левом верхнем углу. Кольца — обычные тени без размытия. */
+.sun {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffce32;
+  box-shadow:
+    0 0 0 6px white,
+    0 0 0 11px #ffcf38,
+    0 0 0 17px white,
+    0 0 0 22px #ffcf38,
+    0 0 0 28px white,
+    0 0 0 33px #ffcf38,
+    0 0 0 39px white,
+    0 0 0 44px #ffcf38;
+}
+.cloud {
+  position: absolute;
+  top: -12px;
+  width: 58px;
+  height: 35px;
+  border-radius: 50%;
+  background: radial-gradient(at 30% 30%, #e7f4ff, #79adfb 75%);
+}
+.cloud-one {
+  left: 81px;
+}
+.cloud-two {
+  left: 116px;
+  top: -18px;
+}
+.cloud-three {
+  left: 153px;
+  top: -22px;
+}
+.smoke {
+  position: absolute;
+  width: 11px;
+  height: 12px;
+  border: 3px solid #86cfe5;
+  border-radius: 50%;
+  background: #e9f7fa;
+}
+.smoke-one {
+  left: 130px;
+  top: 54px;
+}
+.smoke-two {
+  left: 134px;
+  top: 36px;
+  width: 13px;
+  height: 13px;
+}
+.smoke-three {
+  left: 149px;
+  top: 29px;
+  width: 13px;
+  height: 13px;
+}
+
+/* Кабина: две стойки, крыша и изогнутое красное сиденье. */
+.cabin-post {
+  position: absolute;
+  top: 78px;
+  width: 7px;
+  height: 45px;
+  background: #f9b817;
+}
+.post-left {
+  left: 56px;
+}
+.post-right {
+  left: 92px;
+}
+.roof {
+  position: absolute;
+  left: 48px;
+  top: 67px;
+  width: 59px;
+  height: 12px;
+  background: #ef970b;
+}
+.roof::after {
+  content: "";
+  position: absolute;
+  right: -9px;
+  border-top: 12px solid #ef970b;
+  border-right: 9px solid transparent;
+}
+.seat {
+  position: absolute;
+  left: 63px;
+  top: 91px;
+  width: 31px;
+  height: 29px;
+  border-left: 7px solid #d84224;
+  border-bottom: 7px solid #d84224;
+  border-radius: 0 0 0 25px;
+}
+.exhaust {
+  position: absolute;
+  left: 127px;
+  top: 66px;
+  width: 12px;
+  height: 45px;
+  background: linear-gradient(
+    to right,
+    #e89910,
+    #ffc43c 55%,
+    #fff1c8 85%,
+    #dda349
+  );
+}
+.chassis {
+  position: absolute;
+  left: 77px;
+  top: 132px;
+  width: 66px;
+  height: 26px;
+  background: linear-gradient(#a28360, #f5eddf 50%, #a28360);
+}
+.hood-top {
+  position: absolute;
+  left: 87px;
+  top: 106px;
+  width: 58px;
+  height: 15px;
+  background: #a0ce8a;
+}
+.hood-top::after {
+  content: "";
+  position: absolute;
+  right: -9px;
+  border-bottom: 15px solid #a0ce8a;
+  border-right: 9px solid transparent;
+}
+.hood-bottom {
+  position: absolute;
+  left: 87px;
+  top: 121px;
+  width: 58px;
+  height: 14px;
+  background: #7fad63;
+}
+.hood-bottom::after {
+  content: "";
+  position: absolute;
+  right: -9px;
+  border-top: 14px solid #7fad63;
+  border-right: 9px solid transparent;
+}
+
+/* Колёса идут после кузова в HTML и поэтому перекрывают его. */
+.wheel {
+  position: absolute;
+  border: 8px solid #785c40;
+  border-radius: 50%;
+  background: #e7d6a3;
+}
+.wheel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #d53e35;
+}
+.wheel-back {
+  left: 41px;
+  top: 114px;
+  width: 59px;
+  height: 59px;
+}
+.wheel-front {
+  left: 123px;
+  top: 136px;
+  width: 36px;
+  height: 37px;
+  border-width: 5px;
+}
+.wheel-front::after {
+  width: 5px;
+  height: 5px;
+}
+.field {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 27px;
+  background: repeating-linear-gradient(
+    to right,
+    #fafde9 0,
+    #cbe778 7px,
+    #98c829 16px,
+    #fafde9 20px
+  );
+}
