@@ -5,7 +5,7 @@
 - [Кампус СПбПУ](https://www.spbstu.ru/abit/campus/) — история университета и объекты кампуса.
 - [Фундаментальная библиотека](https://www.spbstu.ru/freshman/ilk/ilk.html) — ресурсы библиотеки и обслуживание студентов.
 
-Текст про организацию учебных файлов и выполнение заданий написан для этого учебного сайта. Сайт не является официальным ресурсом СПбПУ.
+Учебный проект, не официальный сайт СПбПУ.
 
 ## Фотографии
 
@@ -22,4 +22,4 @@
 | campus-7.jpg | Derbrauni       | [Saint Petersburg Polytechnical University 03](https://commons.wikimedia.org/wiki/File:Saint_Petersburg_Polytechnical_University_03.jpg)                                                               |
 | campus-8.jpg | Derbrauni       | [Saint Petersburg Polytechnical University 04](https://commons.wikimedia.org/wiki/File:Saint_Petersburg_Polytechnical_University_04.jpg)                                                               |
 
-`tractor-reference.png` — образец из задания, предоставленный пользователем. Логотип и рисунок трактора сделаны средствами CSS.
+`tractor-reference.png` — образец к лабораторной работе № 2.
