@@ -7,24 +7,22 @@
   background: white;
 }
 
-/* Четверть солнца в левом верхнем углу. Кольца — обычные тени без размытия. */
+/* В каждом кольце цвет меняется от светлого у центра к оранжевому снаружи. */
 .sun {
   position: absolute;
-  top: -8px;
-  left: -8px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #ffce32;
-  box-shadow:
-    0 0 0 6px white,
-    0 0 0 11px #ffcf38,
-    0 0 0 17px white,
-    0 0 0 22px #ffcf38,
-    0 0 0 28px white,
-    0 0 0 33px #ffcf38,
-    0 0 0 39px white,
-    0 0 0 44px #ffcf38;
+  top: 0;
+  left: 0;
+  width: 54px;
+  height: 54px;
+  background: repeating-radial-gradient(
+    circle at 0 0,
+    #fff7a5 0,
+    #ffdb39 3px,
+    #f6a727 6px,
+    white 7px,
+    white 11px
+  );
+  border-radius: 0 0 100% 0;
 }
 .cloud {
   position: absolute;

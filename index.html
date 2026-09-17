@@ -5,256 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="За городом — фотожурнал о природе, тихих прогулках и красоте обычных мест. Учебный сайт по HTML и CSS."
+      content="Учебный сайт студента Политеха: лабораторные по вёрстке и информация об учёбе."
     />
-    <title>За городом — ближе к простому</title>
+    <title>Учёба в Политехе — главная</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <a class="skip-link" href="#content">Перейти к содержимому</a>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="За городом — главная">
-          <span class="logo" aria-hidden="true"
-            ><span class="logo-hill"></span
-          ></span>
-          <span class="brand-name"
-            >За городом<small>Журнал простых вещей</small></span
-          >
-        </a>
+        <a class="brand" href="index.html"
+          ><span class="logo" aria-hidden="true"></span
+          ><span class="brand-name"
+            >Учёба в Политехе<small>Сайт студента</small></span
+          ></a
+        >
         <nav aria-label="Основное меню">
           <ul class="menu">
             <li><a href="index.html" aria-current="page">Главная</a></li>
-            <li><a href="pages/journal.html">Журнал</a></li>
+            <li><a href="pages/journal.html">Об учёбе</a></li>
             <li><a href="pages/labs.html">Лабораторные</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
     <main id="content" class="container">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Полевые заметки · Выпуск 01</p>
-          <h1>Чуть дальше<br />от города.<br /><em>Ближе к себе.</em></h1>
+      <section class="intro">
+        <div class="intro-copy">
+          <h1>Учёба в Политехе</h1>
           <p>
-            Открытые поля, лесные тропинки и дни, которым не нужно расписание.
-            Небольшой журнал о том, что легко пропустить в спешке.
+            Это мой сайт для лабораторных по вёрстке. Здесь будут задания по
+            курсу и курсовая работа. Пока готовы сам сайт и рисунок средствами
+            CSS.
           </p>
-          <a class="button" href="pages/journal.html"
-            >Отправиться на прогулку <span aria-hidden="true">↗</span></a
-          >
-          <div class="hero-note">
-            <span></span>Меньше планов. Больше любопытства.
-          </div>
+          <a class="button" href="pages/labs.html">К лабораторным</a>
         </div>
-        <figure class="hero-photo">
+        <figure class="intro-photo">
           <img
-            src="images/fields.jpg"
-            alt="Заходящее солнце над золотистым полем и далёкими холмами"
-            width="1600"
-            height="900"
+            src="images/campus-4.jpg"
+            alt="Главное здание Санкт-Петербургского политехнического университета"
           />
-          <figcaption>01 / Там, где горизонт становится шире</figcaption>
+          <figcaption>Главное здание СПбПУ</figcaption>
         </figure>
       </section>
-
-      <section class="section" aria-labelledby="notes-title">
-        <div class="section-heading">
-          <h2 id="notes-title">
-            <span class="section-number">01</span>Выйти и заметить
-          </h2>
-          <a class="text-link" href="pages/journal.html"
-            >Читать журнал <span aria-hidden="true">↗</span></a
-          >
-        </div>
+      <section class="section">
+        <h2>Что есть на сайте</h2>
         <div class="cards">
           <article class="card">
-            <a href="pages/journal.html#forest" tabindex="-1" aria-hidden="true"
-              ><img
-                src="images/forest-light.jpg"
-                alt=""
-                width="1000"
-                height="667"
-                loading="lazy"
-            /></a>
-            <p class="eyebrow">Наблюдения / Лес</p>
-            <h3><a href="pages/journal.html#forest">У леса свой ритм</a></h3>
+            <h3><a href="pages/journal.html">Об учёбе</a></h3>
             <p>
-              В лесу взгляд постепенно перестаёт искать что-то большое.
-              Становятся заметны полосы света на стволах, мох у корней и тонкие
-              ветки над тропой. Здесь интересно просто идти и смотреть, как
-              меняется знакомый пейзаж за очередным поворотом.
+              Коротко о занятиях, библиотеке и кампусе. Здесь же собраны ссылки,
+              которые могут пригодиться студенту.
             </p>
           </article>
           <article class="card">
-            <a href="pages/journal.html#water" tabindex="-1" aria-hidden="true"
-              ><img
-                src="images/lake.jpg"
-                alt=""
-                width="1000"
-                height="667"
-                loading="lazy"
-            /></a>
-            <p class="eyebrow">Наблюдения / Вода</p>
-            <h3><a href="pages/journal.html#water">Пауза у воды</a></h3>
+            <h3><a href="pages/labs.html">Лабораторные</a></h3>
             <p>
-              Берег — хорошее место для длинной остановки. Отражения собирают в
-              одной картине небо и деревья, а небольшой ветер каждый раз меняет
-              её. Можно рассматривать рябь и слушать воду, совершенно не
-              торопясь делать следующий кадр.
+              Список выполненных работ. У каждого задания будет своя страница,
+              которую можно открыть из общего меню.
             </p>
           </article>
           <article class="card">
-            <a href="pages/journal.html#fields" tabindex="-1" aria-hidden="true"
-              ><img
-                src="images/hills.jpg"
-                alt=""
-                width="1000"
-                height="667"
-                loading="lazy"
-            /></a>
-            <p class="eyebrow">Наблюдения / Простор</p>
-            <h3>
-              <a href="pages/journal.html#fields">Все оттенки зелёного</a>
-            </h3>
+            <h3><a href="pages/tractor.html">Рисунок на CSS</a></h3>
             <p>
-              Издалека поле кажется однотонным, но стоит присмотреться: в низине
-              цвет темнее, на склоне светлее, а у дороги появляются жёлтые
-              полосы травы. Этот спокойный рисунок складывается из множества
-              деталей, которые особенно хорошо видны в мягком вечернем свете.
+              Вторая лабораторная: трактор, солнце и поле. Рисунок собран из
+              HTML-элементов и оформлен в отдельном файле стилей.
             </p>
           </article>
         </div>
       </section>
-
-      <section class="section story" aria-labelledby="about-title">
-        <figure>
-          <img
-            src="images/mist.jpg"
-            alt="Туман между зелёными холмами на рассвете"
-            width="1000"
-            height="667"
-            loading="lazy"
-          />
-          <figcaption>
-            Иногда лучший вид открывается, когда никуда не спешишь.
-          </figcaption>
-        </figure>
-        <div class="story-copy">
-          <p class="eyebrow">О журнале</p>
-          <h2 id="about-title">Красота обычного<br /><em>выходного</em></h2>
-          <p>
-            «За городом» — место для небольших историй о природе. Здесь не нужно
-            собирать список достопримечательностей или успевать в десять мест за
-            один день. Поводом для заметки может стать пустая тропинка, старый
-            деревянный мост или облако, которое на минуту закрыло солнце.
-          </p>
-          <p>
-            Фотографии в журнале показывают разные пейзажи и помогают передать
-            настроение прогулки. Это коллекция наблюдений, а не описание одного
-            реального маршрута. Каждый снимок предлагает задержаться и
-            рассмотреть то, что обычно остаётся где-то на краю внимания.
-          </p>
-          <blockquote class="quote">
-            Хорошему дню за городом иногда достаточно одной тропинки.
-          </blockquote>
-          <a class="text-link" href="pages/journal.html"
-            >Один день без спешки <span aria-hidden="true">↗</span></a
-          >
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="album-title">
-        <div class="section-heading">
-          <h2 id="album-title">
-            <span class="section-number">02</span>Сохранить момент
-          </h2>
-          <span class="eyebrow muted">Маленький фотоальбом</span>
-        </div>
-        <p class="reading muted">
-          Свет, расстояние и погода меняют характер привычных мест. В этой
-          подборке собраны четыре повода остановиться: тихий лес, скалистый
-          склон, далёкие вершины и морская волна. У каждого кадра свой масштаб,
-          но все они оставляют пространство для спокойного взгляда.
-        </p>
-        <p class="reading muted">
-          Такой альбом удобно собирать понемногу. Необязательно искать необычный
-          ракурс: иногда хочется сохранить цвет неба или то, как освещена
-          верхушка дерева. Через некоторое время снимки начинают перекликаться
-          между собой. В разных местах обнаруживаются похожие линии, оттенки и
-          ритмы. Тогда фотографии становятся не просто напоминанием о поездке, а
-          небольшим рассказом о том, что именно привлекает наш взгляд.
+      <section class="section">
+        <h2>Политех</h2>
+        <p>
+          Санкт-Петербургский политехнический университет Петра Великого основан
+          в 1899 году. На территории кампуса находятся учебные корпуса,
+          библиотека, парк и спортивные объекты. Подробнее об университете можно
+          прочитать на
+          <a href="https://www.spbstu.ru/abit/campus/">официальном сайте</a>.
         </p>
         <div class="photo-strip">
           <figure>
             <img
-              src="images/forest.jpg"
-              alt="Высокие деревья в густом зелёном лесу"
-              width="1000"
-              height="667"
+              src="images/campus-1.jpg"
+              alt="Историческое здание Политеха за деревьями"
               loading="lazy"
             />
-            <figcaption>01 — Среди деревьев</figcaption>
+            <figcaption>Учебный корпус</figcaption>
           </figure>
           <figure>
             <img
-              src="images/cliffs.jpg"
-              alt="Хвойный лес у подножия высокой отвесной скалы"
-              width="1000"
-              height="1651"
+              src="images/campus-2.jpg"
+              alt="Боковой фасад здания Политеха"
               loading="lazy"
             />
-            <figcaption>02 — У подножия скал</figcaption>
+            <figcaption>Территория кампуса</figcaption>
           </figure>
           <figure>
             <img
-              src="images/mountains.jpg"
-              alt="Горные вершины под облаками"
-              width="1000"
-              height="667"
+              src="images/campus-3.jpg"
+              alt="Учебный корпус Политеха зимой"
               loading="lazy"
             />
-            <figcaption>03 — Дальше горизонта</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="images/coast.jpg"
-              alt="Тёмно-бирюзовая морская волна крупным планом"
-              width="1000"
-              height="667"
-              loading="lazy"
-            />
-            <figcaption>04 — Наедине с морем</figcaption>
+            <figcaption>Кампус зимой</figcaption>
           </figure>
         </div>
       </section>
-
-      <aside class="lab-banner">
-        <div>
-          <p class="eyebrow">Учебный проект / СПбПУ</p>
-          <h2>У этого журнала есть мастерская</h2>
-          <p>
-            Здесь собраны задания по вёрстке: сам сайт и рисунок трактора из
-            CSS-фигур. Раздел будет пополняться по мере прохождения курса.
-          </p>
-        </div>
-        <a class="text-link" href="pages/labs.html"
-          >К лабораторным <span aria-hidden="true">↗</span></a
-        >
-      </aside>
+      <section class="section">
+        <h2>Полезные ссылки</h2>
+        <ul class="link-list">
+          <li><a href="https://www.spbstu.ru/">Сайт СПбПУ</a></li>
+          <li><a href="https://dl.spbstu.ru/">Дистанционное обучение</a></li>
+          <li>
+            <a href="https://library.spbstu.ru/">Фундаментальная библиотека</a>
+          </li>
+        </ul>
+      </section>
     </main>
-
     <footer class="site-footer">
       <div class="container footer-inner">
-        <div>
-          <span class="footer-title">За городом</span>
-          <p>© 2026 · Попов · Учебный проект СПбПУ</p>
-        </div>
+        <p>Попов · СПбПУ · 2026 · Учебный сайт</p>
         <div class="footer-links">
-          <a href="pages/journal.html">Журнал</a
-          ><a href="pages/labs.html">Лабораторные</a
-          ><a href="SOURCES.md">Источники фотографий</a>
+          <a href="pages/labs.html">Лабораторные</a
+          ><a href="SOURCES.md">Источники</a>
         </div>
       </div>
     </footer>
