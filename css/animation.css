@@ -1,0 +1,171 @@
+.movie {
+  position: relative;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  margin: 8px 0 24px;
+  border: 3px solid #111;
+  overflow: hidden;
+  background: linear-gradient(white, #398a29);
+  animation: shake 0.2s ease-in-out 10s infinite alternate;
+}
+
+.boy {
+  position: absolute;
+  left: 28px;
+  top: 48px;
+  width: 96px;
+}
+
+.boy-first {
+  animation: disappear 0.01s 1.2s forwards;
+}
+
+.boy-wait,
+.question {
+  opacity: 0;
+  animation: appear 0.01s 1.2s forwards, disappear 0.01s 8s forwards;
+}
+
+.boy-fallen {
+  left: 0;
+  top: 37px;
+  width: 132px;
+  opacity: 0;
+  transform-origin: 30% 65%;
+  animation: fall 0.8s ease-in 8s forwards;
+}
+
+.question,
+.answer {
+  position: absolute;
+  margin: 0;
+  color: #222;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.question {
+  top: 3px;
+  left: 52px;
+}
+
+.answer {
+  top: 43px;
+  left: 45px;
+  opacity: 0;
+  transform: rotate(-30deg);
+  animation: appear 0.01s 8s forwards;
+}
+
+.ball,
+.brick {
+  position: absolute;
+  cursor: pointer;
+}
+
+.ball {
+  width: 36px;
+  height: 36px;
+  animation: ball-x 2.8s linear 1.2s both, ball-y 2.8s ease-in-out 1.2s both;
+}
+
+.ball img {
+  width: 100%;
+}
+
+.brick {
+  width: 44px;
+  height: 46px;
+  animation: brick-in-x 2.8s linear 1.2s both,
+    brick-in-y 2.8s ease-out 1.2s both,
+    brick-out-x 1.6s linear 8.4s forwards,
+    brick-out-y 1.6s ease-in-out 8.4s forwards;
+}
+
+.brick-image {
+  position: relative;
+  display: block;
+  width: 44px;
+  height: 46px;
+  overflow: hidden;
+}
+
+.brick-image img {
+  position: absolute;
+  left: -128px;
+  top: -181px;
+  width: 250px;
+  max-width: none;
+}
+
+.ball:hover img,
+.ball:focus img,
+.brick:hover .brick-image,
+.brick:focus .brick-image {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes disappear {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes ball-x {
+  0% { left: -40px; }
+  25% { left: 6px; }
+  50% { left: 38px; }
+  75% { left: 112px; }
+  100% { left: 148px; }
+}
+
+@keyframes ball-y {
+  0% { top: 148px; }
+  25% { top: 48px; }
+  50% { top: 26px; }
+  75% { top: 50px; }
+  100% { top: 146px; }
+}
+
+@keyframes brick-in-x {
+  from { left: 210px; }
+  to { left: 100px; }
+}
+
+@keyframes brick-in-y {
+  from { top: 74px; }
+  to { top: 136px; }
+}
+
+@keyframes fall {
+  from { opacity: 1; transform: rotate(-35deg); }
+  to { opacity: 1; transform: rotate(0); }
+}
+
+@keyframes brick-out-x {
+  from { left: 100px; }
+  to { left: 215px; }
+}
+
+@keyframes brick-out-y {
+  0% { top: 136px; }
+  20% { top: 92px; }
+  40% { top: 112px; }
+  60% { top: 60px; }
+  80% { top: 78px; }
+  100% { top: 38px; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+  from { transform: translateY(-2px); }
+  to { transform: translateY(2px); }
+}

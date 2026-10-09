@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Анимация — Учёба в Политехе</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/animation.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html">
+          <span class="logo" aria-hidden="true"></span>
+          <span class="brand-name">
+            Учёба в Политехе
+            <small>Сайт студента</small>
+          </span>
+        </a>
+        <nav aria-label="Основное меню">
+          <ul class="menu">
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="journal.html">Об учёбе</a></li>
+            <li><a href="labs.html">Лабораторные</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a> /
+        <a href="labs.html">Лабораторные</a> / Работа № 3
+      </div>
+      <header class="page-heading">
+        <h1>Лабораторная № 3. Анимация</h1>
+        <p>Анимированный ролик размером 200 × 200 px.</p>
+      </header>
+      <div class="movie">
+        <p class="question">Где мяч?</p>
+        <p class="answer">Это кирпич!</p>
+        <img class="boy boy-first" src="../images/animation/boy1.png" alt="Мальчик машет рукой" />
+        <img class="boy boy-wait" src="../images/animation/boy2.png" alt="Мальчик ищет мяч" />
+        <img class="boy boy-fallen" src="../images/animation/boy3.png" alt="Мальчик падает" />
+        <div class="ball" tabindex="0" aria-label="Мяч: наведите указатель для вращения">
+          <img src="../images/animation/ball.png" alt="Мяч" />
+        </div>
+        <div class="brick" tabindex="0" aria-label="Кирпич: наведите указатель для вращения">
+          <span class="brick-image">
+            <img src="../images/animation/box.png" alt="Кирпич" />
+          </span>
+        </div>
+      </div>
+      <p>Наведите мышь на мяч или кирпич — предмет начнёт вращаться.</p>
+      <p><a class="button" href="animation.html">Повторить</a></p>
+      <p>Движение задано в CSS через <code>@keyframes</code>. В конце кирпич улетает, а блок ролика слегка трясётся.</p>
+      <a href="labs.html">Все лабораторные работы</a>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Попов · СПбПУ · 2026 · Учебный сайт</p>
+        <div class="footer-links">
+          <a href="../index.html">Главная</a>
+          <a href="labs.html">Лабораторные</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
