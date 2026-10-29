@@ -6,8 +6,12 @@
   margin: 8px 0 24px;
   border: 3px solid #111;
   overflow: hidden;
+  user-select: none;
   background: linear-gradient(white, #398a29);
-  animation: shake 0.2s ease-in-out 10s infinite alternate;
+}
+
+.movie:active {
+  animation: shake 0.2s ease-in-out 2s infinite alternate;
 }
 
 .boy {
@@ -17,14 +21,24 @@
   width: 96px;
 }
 
-.boy-first {
+.movie:hover .boy-first {
   animation: disappear 0.01s 1.2s forwards;
 }
 
 .boy-wait,
 .question {
   opacity: 0;
-  animation: appear 0.01s 1.2s forwards, disappear 0.01s 8s forwards;
+}
+
+.movie:hover .boy-wait,
+.movie:hover .question {
+  animation: appear 0.01s 1.2s forwards;
+}
+
+.movie:active .boy-first,
+.movie:active .boy-wait,
+.movie:active .question {
+  visibility: hidden;
 }
 
 .boy-fallen {
@@ -33,7 +47,10 @@
   width: 132px;
   opacity: 0;
   transform-origin: 30% 65%;
-  animation: fall 0.8s ease-in 8s forwards;
+}
+
+.movie:active .boy-fallen {
+  animation: fall 0.8s ease-in forwards;
 }
 
 .question,
@@ -55,19 +72,28 @@
   left: 45px;
   opacity: 0;
   transform: rotate(-30deg);
-  animation: appear 0.01s 8s forwards;
+}
+
+.movie:active .answer {
+  animation: appear 0.01s forwards;
 }
 
 .ball,
 .brick {
   position: absolute;
+  left: 0;
+  top: 0;
   cursor: pointer;
 }
 
 .ball {
   width: 36px;
   height: 36px;
-  animation: ball-x 2.8s linear 1.2s both, ball-y 2.8s ease-in-out 1.2s both;
+  transform: translate(-40px, 148px);
+}
+
+.movie:hover .ball {
+  animation: ball-in 2.8s linear 1.2s both;
 }
 
 .ball img {
@@ -77,10 +103,15 @@
 .brick {
   width: 44px;
   height: 46px;
-  animation: brick-in-x 2.8s linear 1.2s both,
-    brick-in-y 2.8s ease-out 1.2s both,
-    brick-out-x 1.6s linear 8.4s forwards,
-    brick-out-y 1.6s ease-in-out 8.4s forwards;
+  transform: translate(210px, 74px);
+}
+
+.movie:hover .brick {
+  animation: brick-in 2.8s linear 1.2s both;
+}
+
+.movie:active .brick {
+  animation: brick-out 1.6s ease-in-out 0.4s both;
 }
 
 .brick-image {
@@ -116,30 +147,20 @@
   to { opacity: 0; }
 }
 
-@keyframes ball-x {
-  0% { left: -40px; }
-  25% { left: 6px; }
-  50% { left: 38px; }
-  75% { left: 112px; }
-  100% { left: 148px; }
+@keyframes ball-in {
+  0% { transform: translate(-40px, 148px); }
+  25% { transform: translate(6px, 48px); }
+  50% { transform: translate(38px, 26px); }
+  75% { transform: translate(112px, 50px); }
+  100% { transform: translate(148px, 146px); }
 }
 
-@keyframes ball-y {
-  0% { top: 148px; }
-  25% { top: 48px; }
-  50% { top: 26px; }
-  75% { top: 50px; }
-  100% { top: 146px; }
-}
-
-@keyframes brick-in-x {
-  from { left: 210px; }
-  to { left: 100px; }
-}
-
-@keyframes brick-in-y {
-  from { top: 74px; }
-  to { top: 136px; }
+@keyframes brick-in {
+  0% { transform: translate(210px, 74px); }
+  25% { transform: translate(182.5px, 98px); }
+  50% { transform: translate(155px, 116px); }
+  75% { transform: translate(127.5px, 130px); }
+  100% { transform: translate(100px, 136px); }
 }
 
 @keyframes fall {
@@ -147,18 +168,13 @@
   to { opacity: 1; transform: rotate(0); }
 }
 
-@keyframes brick-out-x {
-  from { left: 100px; }
-  to { left: 215px; }
-}
-
-@keyframes brick-out-y {
-  0% { top: 136px; }
-  20% { top: 92px; }
-  40% { top: 112px; }
-  60% { top: 60px; }
-  80% { top: 78px; }
-  100% { top: 38px; }
+@keyframes brick-out {
+  0% { transform: translate(100px, 136px); }
+  20% { transform: translate(123px, 92px); }
+  40% { transform: translate(146px, 112px); }
+  60% { transform: translate(169px, 60px); }
+  80% { transform: translate(192px, 78px); }
+  100% { transform: translate(215px, 38px); }
 }
 
 @keyframes spin {

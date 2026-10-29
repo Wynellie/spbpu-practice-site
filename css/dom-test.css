@@ -1,0 +1,120 @@
+.quiz-stage {
+  min-height: 560px;
+  padding: 20px;
+  overflow: hidden;
+  background: #fbefb6;
+  color: #51462d;
+}
+
+#test-restart[hidden] { display: none; }
+
+.quiz-heading {
+  width: 210px;
+  margin-bottom: 12px;
+  background: #a99a6b;
+  color: #fff;
+  text-align: center;
+}
+
+.quiz-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.quiz-question,
+.quiz-answer {
+  border: 1px solid #e8dba5;
+  padding: 12px;
+  background: #fff9df;
+  color: inherit;
+  font: inherit;
+  line-height: 1.4;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.quiz-question {
+  width: 210px;
+  flex-shrink: 0;
+}
+
+.quiz-question:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.quiz-question:hover,
+.quiz-answer:hover {
+  transform: scale(1.035);
+}
+
+.quiz-answers {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.quiz-answer {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.quiz-answer:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.quiz-answer.correct-answer {
+  background: #e6f0cf;
+  transform: scale(1.04);
+}
+
+.quiz-explanation {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.quiz-mark {
+  margin-left: 8px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.quiz-mark.right { color: #27852c; }
+.quiz-mark.wrong { color: #d9362b; }
+.quiz-question.selected { border-color: #8b7d4d; }
+.quiz-answer.shake,
+.quiz-question.shake { animation: quiz-shake 0.3s; }
+.quiz-answer.leaving { animation: quiz-down 0.55s ease-in forwards; }
+
+@keyframes quiz-shake {
+  0%, 100% { transform: translateX(0); }
+  25%, 75% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+}
+
+@keyframes quiz-down {
+  to { transform: translateY(600px); opacity: 0; }
+}
+
+@media (max-width: 800px) {
+  .quiz-stage { padding: 12px; }
+  .quiz-heading, .quiz-question { width: 160px; }
+  .quiz-row { gap: 12px; }
+  .quiz-answer { padding: 8px; font-size: 14px; }
+  .quiz-answers { gap: 8px; }
+}
+
+@media (max-width: 580px) {
+  .quiz-row { flex-direction: column; }
+  .quiz-question, .quiz-heading { width: 100%; }
+  .quiz-answers { width: 100%; flex-wrap: wrap; }
+  .quiz-answer { flex: 1 1 120px; }
+}
