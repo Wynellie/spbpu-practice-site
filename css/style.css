@@ -65,6 +65,9 @@ main {
   padding-bottom: 32px;
 }
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   border-bottom: 1px solid #dce1dc;
   background: #f6f8f6;
 }
@@ -94,8 +97,8 @@ main {
 }
 .logo {
   position: relative;
-  width: 44px;
-  height: 44px;
+  width: 56px;
+  height: 56px;
   flex-shrink: 0;
   background: #477454;
   border-radius: 5px;
@@ -104,35 +107,38 @@ main {
 .logo::after {
   content: "";
   position: absolute;
-  top: 12px;
-  width: 13px;
-  height: 20px;
+  top: 27%;
+  width: 30%;
+  height: 46%;
   background: white;
 }
 .logo::before {
-  left: 8px;
+  left: 18%;
   border-radius: 2px 4px 0 2px;
 }
 .logo::after {
-  right: 8px;
+  right: 18%;
   border-radius: 4px 2px 2px 0;
 }
 .menu {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .menu a {
   display: block;
-  padding: 5px 0;
+  padding: 7px 10px;
+  border-radius: 4px;
   text-decoration: none;
   font-size: 15px;
 }
-.menu a[aria-current="page"] {
-  border-bottom: 2px solid #477454;
+.menu a:hover,
+.menu a[aria-current] {
+  background: #e2ebe3;
+  color: #183d27;
 }
 .breadcrumbs {
   margin-top: 20px;
@@ -243,14 +249,15 @@ main {
   margin: 8px 0;
 }
 .inline-photo {
-  float: right;
-  width: 44%;
-  margin: 4px 0 12px 22px;
+  margin: 0 0 16px;
 }
 .inline-photo img {
   width: 100%;
-  height: 175px;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
+}
+.article-body section {
+  scroll-margin-top: 140px;
 }
 .source-note {
   font-size: 13px;
@@ -334,10 +341,19 @@ code {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    padding: 8px 0;
+    gap: 4px;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
   }
   .menu {
-    gap: 24px;
+    gap: 4px;
+  }
+  .menu a {
+    font-size: 14px;
+    padding: 6px 8px;
   }
   .intro,
   .cards,
@@ -355,14 +371,6 @@ code {
   }
   .photo-strip figure {
     flex: 1 1 40%;
-  }
-  .inline-photo {
-    float: none;
-    width: 100%;
-    margin: 0 0 16px;
-  }
-  .inline-photo img {
-    height: 220px;
   }
   .work-item {
     flex-wrap: wrap;
