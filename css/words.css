@@ -1,0 +1,70 @@
+.word-pool, .word-field, .word-output {
+  border: 1px solid #c8cdd1;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.word-pool {
+  min-height: 66px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.word-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.word-field {
+  position: relative;
+  min-height: 280px;
+  background: #f2f7fc;
+}
+
+.word-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.word-controls input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px;
+  font: inherit;
+}
+
+.word-output {
+  min-height: 46px;
+  overflow-wrap: anywhere;
+  background: #fff8f6;
+}
+
+.word-chip {
+  max-width: 100%;
+  border: 0;
+  border-radius: 50%;
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.word-chip.dragging {
+  z-index: 10;
+  cursor: grabbing;
+}
+
+@media (max-width: 600px) {
+  .word-layout {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
